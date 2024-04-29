@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "DominoMono";
+  src: url(DominoMono-Medium1-Trial.otf);
+}
+
+@font-face {
+  font-family: "DominoMonoBold";
+  src: url(DominoMono-Bold1-Trial.otf);
+}
+body {
+  font-family: DominoMonoBold;
+  text-align: left;
+  padding: 1% 5% 5% 5%;
+  background-image: url("pictures/background.jpg"); /* 设置背景图片 */
+  background-size: cover; /* 覆盖整个背景 */
+  background-position: center; /* 居中背景图片 */
+  background-repeat: repeat; /* 不重复背景图片 */
+  color: #231f20;
+}
+
+h1 {
+  font-family: DominoMonoBold;
+  text-align: center;
+}
+
+h1 {
+  font-family: DominoMonoBold;
+}
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* 确保容器占满整行 */
+}
+
+.image-container {
+  width: 42%; /* 每个图片容器宽度调整至45%，以便两张图片可以并排显示 */
+  background-color: #6fcbda;
+  padding: 2%;
+  border: 5px solid #231f20;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out; /* 添加平滑的过渡效果 */
+}
+
+img:hover {
+  transform: scale(1.05); /* 放大到原始尺寸的105% */
+}
+
+.progress-bar-container {
+  width: 100%;
+  margin-top: 10px; /* 从图片到进度条的间距 */
+  display: flex;
+  background-color: #455b52;
+  border-radius: 0; /* 移除圆角 */
+  overflow: hidden;
+  height: 40px; /* 增加进度条的高度以实现加粗效果 */
+}
+
+.progress-bar {
+  height: 100%;
+  color: white;
+  line-height: 40px; /* 调整文字行高与进度条高度一致 */
+  text-align: center;
+  border-radius: 0; /* 移除圆角 */
+  position: relative; /* 设置相对定位 */
+}
+
+.progress-bar:first-child {
+  background-color: #3e726a; /* 第一张图片对应的进度条颜色 */
+  width: 41%; /* 根据投票比例调整宽度 */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - 10px) 100%,
+    0% 100%
+  ); /* 创建斜线分隔 */
+}
+
+.progress-bar:last-child {
+  background-color: #4c453b; /* 第二张图片对应的进度条颜色 */
+  width: 59%; /* 根据投票比例调整宽度 */
+  clip-path: polygon(10px 0, 100% 0, 100% 100%, 0% 100%); /* 创建斜线分隔 */
+}
+
+/* 在现有的CSS样式之后追加 */
+.comments-section {
+  max-width: 90%; /* 宽度最大占80% */
+  margin: 2% auto; /* 顶部和底部的间距设置为2% */
+  padding: 2%; /* 内边距使用百分比，取决于父元素的宽度 */
+  background-color: #6fcbda;
+  border-radius: 0; /* 使用直角 */
+  border: 5px solid #231f20;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%; /* 底部间距使用百分比 */
+}
+
+.user-avatar {
+  width: 50px; /* 设置为具体像素值来检查是否显示 */
+  height: 50px; /* 设置为具体像素值来检查是否显示 */
+  background-color: white; /* 以确保头像可见性 */
+  border-radius: 0; /* 使用直角 */
+  margin-right: 2%; /* 右边距使用百分比 */
+  background-color: white;
+}
+
+.comment-content {
+  background-color: #b4b5b6;
+  padding: 2%; /* 内边距使用百分比 */
+  border-radius: 0; /* 使用直角 */
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1); /* 阴影效果保持，使用em单位，因为影响不大 */
+}
+
+.user-name {
+  font-weight: bold;
+  color: #231f20;
+}
