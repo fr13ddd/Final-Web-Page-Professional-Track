@@ -57,7 +57,7 @@ img:hover {
   width: 100%;
   margin-top: 10px; /* 从图片到进度条的间距 */
   display: flex;
-  background-color: #455b52;
+  background-color: #88a79b;
   border-radius: 0; /* 移除圆角 */
   overflow: hidden;
   height: 40px; /* 增加进度条的高度以实现加粗效果 */
@@ -73,7 +73,7 @@ img:hover {
 }
 
 .progress-bar:first-child {
-  background-color: #3e726a; /* 第一张图片对应的进度条颜色 */
+  background-color: #64aca4; /* 第一张图片对应的进度条颜色 */
   width: 41%; /* 根据投票比例调整宽度 */
   clip-path: polygon(
     0 0,
@@ -84,7 +84,7 @@ img:hover {
 }
 
 .progress-bar:last-child {
-  background-color: #4c453b; /* 第二张图片对应的进度条颜色 */
+  background-color: #aca392; /* 第二张图片对应的进度条颜色 */
   width: 59%; /* 根据投票比例调整宽度 */
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0% 100%); /* 创建斜线分隔 */
 }
